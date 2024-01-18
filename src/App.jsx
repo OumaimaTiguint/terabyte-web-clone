@@ -45,7 +45,7 @@ function App() {
         		</div>
       		</header>
 
-			<main className="sm:p-8 px-4 py-8 w-full bg-blue-900 min-h-screen">
+			<main className="sm:py-32 sm:px-16 px-4 py-16 w-full bg-blue-900 min-h-screen">
 				<Routes>
 					<Route path="/" element={ <Home />} />
 					<Route path="/about-us" element={ <AboutUs />} />
