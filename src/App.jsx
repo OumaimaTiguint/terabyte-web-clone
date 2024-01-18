@@ -5,6 +5,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { socialsData } from './data/socialsData';
+import { BackToTop } from './components';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
 	const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
@@ -48,10 +50,12 @@ function App() {
       		</header>
 
 			<main className="sm:py-32 sm:px-16 px-4 py-16 w-full bg-blue-950 min-h-screen">
+				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={ <Home />} />
 					<Route path="/about-us" element={ <AboutUs />} />
 				</Routes>
+				<BackToTop />
 			</main>
 
 			<footer className="w-fullrelative bg-blue-950 text-white">
