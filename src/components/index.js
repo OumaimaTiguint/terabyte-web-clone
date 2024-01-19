@@ -5,6 +5,8 @@ import InternationalTeam from './internationalTeam';
 import WorkExampleCard from './WorkExampleCard';
 import MyRecentWork from './MyRecentWork';
 import ExploreOurServices from './ExploreOurServices';
+import OfferExpCard from './OfferExpCard';
+import OfferExplanation from './OfferExplanation';
 
 export {
     Loader,
@@ -13,5 +15,7 @@ export {
     InternationalTeam,
     WorkExampleCard,
     MyRecentWork,
-    ExploreOurServices
+    ExploreOurServices,
+    OfferExpCard,
+    OfferExplanation
 }
