@@ -42,7 +42,7 @@ function App() {
           			{links.map(e => (
             			<Link to={e.path} 
                   			  key={e.id}
-                  			  className={`font-inter font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} text-white px-4 py-2 rounded-md mb-2`}>
+                  			  className={`font-inter font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} text-white px-4 py-2 rounded-full mb-2`}>
               				{e.name}
             			</Link>
           			))}
