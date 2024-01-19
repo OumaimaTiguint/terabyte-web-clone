@@ -10,6 +10,12 @@ const CardTalkWithUs = () => {
                 <p className='max-w-[1004px] text-center sm:text-2xl xs:text-xl text-lg font-normal leading-9 pt-14'>
                     We are at your service to discuss, analyze, propose, decipher, draw the roadmap or just advise you. Lets talk even if you are just curious. We have a saying that goes: Even if you're not buying you benefit.
                 </p>
+
+                <div className="mt-12 flex justify-center">
+                    <button className='bg-[#325588] text-[#b3c0d3] rounded-full shadow-lg py-2 px-10 transition-transform transform hover:scale-105 hover:opacity-80 hover:border hover:border-white hover:text-white'>
+                        Let's Talk
+                    </button>
+                </div>
             </div>
         </div>
     );
