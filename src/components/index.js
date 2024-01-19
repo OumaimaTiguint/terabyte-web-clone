@@ -7,6 +7,7 @@ import MyRecentWork from './MyRecentWork';
 import ExploreOurServices from './ExploreOurServices';
 import OfferExpCard from './OfferExpCard';
 import OfferExplanation from './OfferExplanation';
+import CardTalkWithUs from './CardTalkWithUs';
 
 export {
     Loader,
@@ -17,5 +18,6 @@ export {
     MyRecentWork,
     ExploreOurServices,
     OfferExpCard,
-    OfferExplanation
+    OfferExplanation,
+    CardTalkWithUs
 }
