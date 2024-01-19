@@ -11,6 +11,12 @@ const Home = () => {
             <ExploreOurServices />
             <MyRecentWork />
             <OfferExplanation />
+            <div className='flex flex-col justify-center items-center mb-8'>
+                <h2 className='text-blue-300 text-center sm:text-2xl xs:text-xl text-lg font-semibold leading-10 p-8 element-to-fade-to-top fade-in-top'>
+                    SOME OF OUR CLIENTS
+                </h2>
+            </div>
+            <ClientsMarquee />
         </>
     )
 }
