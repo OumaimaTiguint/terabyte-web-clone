@@ -4,6 +4,7 @@ import ClientsMarquee from './ClientsMarquee';
 import InternationalTeam from './internationalTeam';
 import WorkExampleCard from './WorkExampleCard';
 import MyRecentWork from './MyRecentWork';
+import ExploreOurServices from './ExploreOurServices';
 
 export {
     Loader,
@@ -11,5 +12,6 @@ export {
     ClientsMarquee,
     InternationalTeam,
     WorkExampleCard,
-    MyRecentWork
+    MyRecentWork,
+    ExploreOurServices
 }

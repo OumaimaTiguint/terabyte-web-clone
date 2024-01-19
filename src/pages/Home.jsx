@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ClientsMarquee, InternationalTeam, Loader, MyRecentWork } from '../components';
+import { ClientsMarquee, ExploreOurServices, InternationalTeam, Loader, MyRecentWork } from '../components';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
@@ -8,6 +8,7 @@ const Home = () => {
         <>
             <ClientsMarquee />
             <InternationalTeam />
+            <ExploreOurServices />
             <MyRecentWork />
         </>
     )
