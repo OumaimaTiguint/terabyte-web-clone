@@ -8,6 +8,7 @@ import ExploreOurServices from './ExploreOurServices';
 import OfferExpCard from './OfferExpCard';
 import OfferExplanation from './OfferExplanation';
 import CardTalkWithUs from './CardTalkWithUs';
+import WhySection from './WhySection';
 
 export {
     Loader,
@@ -19,5 +20,6 @@ export {
     ExploreOurServices,
     OfferExpCard,
     OfferExplanation,
-    CardTalkWithUs
+    CardTalkWithUs,
+    WhySection
 }
