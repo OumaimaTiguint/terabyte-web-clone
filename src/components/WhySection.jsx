@@ -1,9 +1,10 @@
 import React from 'react';
 import { whySectionData } from '../data/whySectionData';
+import WhyCard from './WhyCard';
 
 function WhySection() {
     return (
-        <div className='h-[100vh] items-center justify-center text-white'>
+        <div className='min-h-[100vh] items-center justify-center text-white'>
             <div className='flex flex-col md:flex-row items-center justify-center h-full'>
                 <div className='flex-2 h-1/2 md:h-full my-auto flex md:flex-col flex-row items-end justify-center'>
                     <div className='flex content-center justify-center items-center'>
@@ -51,6 +52,36 @@ function WhySection() {
                                 {paragraph}
                             </p>
                         ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className='relative flex justify-center items-center mt-56'>
+                <div className='gap-14 flex flex-wrap max-w-4xl'>
+                    {/* Left cards */}
+                    <div className='gap-14 flex flex-col'>
+                        {whySectionData.cards.map((card, index) => 
+                            index % 2 === 0 && (
+                                <WhyCard key={index}
+                                         id={index}
+                                         title={card.title}
+                                         logo={card.logo}
+                                         description={card.description} />
+                            )
+                        )}
+                    </div>
+
+                    {/* Right cards */}
+                    <div className='min-[831px]:mt-44 gap-14 flex flex-col'>
+                        {whySectionData.cards.map((card, index) => 
+                            index % 2 !== 0 && (
+                                <WhyCard key={index}
+                                         id={index}
+                                         title={card.title}
+                                         logo={card.logo}
+                                         description={card.description} />
+                            )
+                        )}
                     </div>
                 </div>
             </div>

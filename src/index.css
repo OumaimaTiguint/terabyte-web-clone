@@ -5,3 +5,10 @@
 * {
   font-family: 'Inter', sans-serif;
 }
+
+.why-gradient-full-card {
+  transition: scale 0.5s;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
