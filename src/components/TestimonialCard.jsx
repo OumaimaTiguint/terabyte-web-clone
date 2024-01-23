@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestimonialCard = ({id, name, role, company, picture, message, rating}) => {
     return (
-        <div key={id} className={`one-tes-card ${id % 2 === 0 ? 'bg-[#091242]' : 'bg-white'}`}>
+        <div key={id} className={`one-tes-card ${id % 2 === 0 ? 'bg-[#091242]' : 'bg-[#f4f4f5]'}`}>
             <div key={id} className={`relative ${id % 2 === 0 ? 'one-content-card-even' : 'one-content-card-odd'}`}>
                 <div className='flex xs:justify-between justify-center items-center w-full'>
                     <div className={`${id % 2 === 0 ? 'text-white' : 'text-blue-900'} relative flex items-center xs:flex-row flex-col gap-2`}>
@@ -33,7 +33,7 @@ const TestimonialCard = ({id, name, role, company, picture, message, rating}) =>
                     </div>
                 </div>
                 <div className='flex flex-col relative h-full'>
-                    <p className='relative max-w-[456px] min-h-[250px] h-full text-slate-500 text-base text-justify font-medium leading-normal'>
+                    <p className='relative max-w-[456px] min-h-[200px] h-full text-slate-500 text-base text-justify font-medium leading-normal'>
                         {message}
                     </p>
                     <div className='relative mt-8'>

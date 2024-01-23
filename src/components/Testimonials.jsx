@@ -9,9 +9,14 @@ import 'slick-carousel/slick/slick-theme.css';
 const Testimonials = () => {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [totalSlides, setTotalSlides] = useState(testimonialsData.length);
+
+    const updateTotalSlides = (slideCount) => {
+        setTotalSlides(slideCount);
+    };
 
     const CustomNextArrow = () => (
-        <div className={`next tes-prev-btn tes-controller-btn ${currentSlide === testimonialsData.length - 1 ? 'tes_edge' : ''}`}
+        <div className={`next tes-prev-btn tes-controller-btn ${currentSlide === totalSlides - 1 ? 'tes_edge' : ''}`}
              onClick={() => sliderRef.current.slickNext()}>
             <img className="rotate-180 w-6 active"
                  src="https://terabyte-web.com/img/home/tes/arrow.svg"
@@ -41,6 +46,7 @@ const Testimonials = () => {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
         afterChange: (current) => setCurrentSlide(current),
+        beforeChange: (_, next) => updateTotalSlides(next + 1),
         responsive: [
             {
                 breakpoint: 9999,
@@ -52,6 +58,8 @@ const Testimonials = () => {
                 breakpoint: 1199,
                 settings: {
                     slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: "0"
                 },
             },
         ],
@@ -69,7 +77,8 @@ const Testimonials = () => {
                     <CustomNextArrow />
                 </div>
             </div>
-            <Slider ref={sliderRef} {...settings} className='testimonial-slider'>
+            <Slider ref={sliderRef} {...settings}
+                    className={`testimonial-slider ${totalSlides === 1 ? 'single-slide' : ''}`}>
                 {testimonialsData.map((tes, index) => (
                     <TestimonialCard key={index}
                                      id={index}

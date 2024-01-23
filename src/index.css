@@ -19,8 +19,8 @@
   display: flex;
   min-height: 500px;
   height: auto;
-  width: 100vw;
   max-width: 37.5rem;
+  margin: auto;
   align-items: center;
   justify-content: center;
   --tw-bg-opacity: 1;
@@ -57,9 +57,9 @@
 
 .testimonial_slider {
   position: relative;
-  margin-top: 1.25rem;
   height: 100%;
   width: 75rem;
+  margin: 1.25rem auto;
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -98,4 +98,14 @@
   padding-right: 1.5rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.testimonial-slider.slick-slider {
+  overflow: hidden !important;
+}
+.slick-slide.single-slide {
+  display: grid;
+  place-items: center !important;
+  width: 100%;
+  box-sizing: border-box;
 }
