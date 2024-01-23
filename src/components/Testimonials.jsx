@@ -66,8 +66,15 @@ const Testimonials = () => {
     };
 
     return (
-        <div className='min-h-[90vh]'>
-            <div className='relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 px-4 gap-y-2'>
+        <div className='min-h-[100vh] mt-20'>
+            <div className='relative w-full max-w-screen-2xl'>
+                <img src="https://terabyte-web.com/img/home/tes/testimonials.svg" 
+                     alt="testimonials" 
+                     width="100%" 
+                     height="100%" />
+                <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#172554] to-transparent"></div>
+            </div>
+            <div className='mt-20 relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 px-4 gap-y-2'>
                 <h2 className='sm:text-4xl xs:text-2xl text-xl font-semibold text-white'>
                     What Our Customers Say
                 </h2>
