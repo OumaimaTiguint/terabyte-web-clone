@@ -109,3 +109,9 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.shining-btn {
+  overflow: hidden;
+  scale: 1;
+  transition: scale 0.2s, color 0.2s;
+}

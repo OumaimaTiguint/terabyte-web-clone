@@ -11,6 +11,7 @@ import CardTalkWithUs from './CardTalkWithUs';
 import WhySection from './WhySection';
 import Testimonials from './Testimonials';
 import TestimonialCard from './TestimonialCard';
+import ContactUs from './ContactUs';
 
 export {
     Loader,
@@ -26,4 +27,5 @@ export {
     WhySection,
     TestimonialCard,
     Testimonials,
+    ContactUs
 }
