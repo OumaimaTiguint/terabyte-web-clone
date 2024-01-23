@@ -1,6 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
+import isEmail from 'validator/lib/isEmail';
 
 const ContactUs = () => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setphoneNumber] = useState('');
+    const [company, setCompany] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleContactForm = (e) => {
+        e.preventDefault();
+
+        if (name && email && phoneNumber && company && message) {
+            if (isEmail(email)) {
+                const responseData = {
+                    name: name,
+                    email: email,
+                    phoneNumber: phoneNumber,
+                    company: company,
+                    message: message,
+                };
+
+                axios.post("https://formspree.io/f/xdorplew", responseData).then((res) => {
+                    console.log('success');
+
+                    setName('');
+                    setEmail('');
+                    setphoneNumber('');
+                    setCompany('');
+                    setMessage('');
+                });
+            } else {
+                setErrMsg('Invalid email');
+            }
+        } else {
+            setErrMsg('Enter all the fields');
+        }
+    };
+
     return (
         <div className='relative pb-28 flex flex-col justify-center items-center text-white'>
             <div className='relative w-full max-w-screen-2xl'>
@@ -8,7 +47,7 @@ const ContactUs = () => {
                      alt="contact_us"
                      width="100%" 
                      height="100%" 
-                     class="active" />
+                     className="active" />
             </div>
             <div className='w-full flex items-center justify-center px-5'>
                 <div className='max-w-[75.5rem] w-full h-full px-6 py-[6rem] bg-tera-container-to-tl border-[1px] rounded-[44px] border-white border-opacity-10 justify-start items-center flex mt-20 element-to-fade-to-top fade-in-top'>
@@ -60,26 +99,36 @@ const ContactUs = () => {
                                     <input className='w-full h-[60px] border-[1px] placeholder-white border-white bg-transparent py-3 px-6'
                                            name='name'
                                            type='text'
-                                           placeholder='Your name*' />
+                                           placeholder='Your name*'
+                                           value={name}
+                                           onChange={(e) => setName(e.target.value)} />
                                     <input className='w-full h-[60px] border-[1px] placeholder-white border-white bg-transparent py-3 px-6'
                                            name='email'
                                            type='text'
-                                           placeholder='Email*' />
+                                           placeholder='Email*'
+                                           value={email}
+                                           onChange={(e) => setEmail(e.target.value)} />
                                 </div>
                                 <div className='flex flex-col min-[686px]:flex-row gap-7'>
                                     <input className='w-full h-[60px] border-[1px] placeholder-white border-white bg-transparent py-3 px-6'
                                            name='phoneNumber'
                                            type='number'
-                                           placeholder='Phone Number*' />
+                                           placeholder='Phone Number*'
+                                           value={phoneNumber}
+                                           onChange={(e) => setphoneNumber(e.target.value)} />
                                     <input className='w-full h-[60px] border-[1px] placeholder-white border-white bg-transparent py-3 px-6'
                                            name='company'
                                            type='text'
-                                           placeholder='Company*' />
+                                           placeholder='Company*'
+                                           value={company}
+                                           onChange={(e) => setCompany(e.target.value)} />
                                 </div>
                                 <textarea className='border-[1px] placeholder-white border-white bg-transparent py-3 px-6'
                                           rows={5}
                                           name='message'
-                                          placeholder='Your Message*' />
+                                          placeholder='Your Message*'
+                                          value={message}
+                                          onChange={(e) => setMessage(e.target.value)} />
                                 <div className='relative flex justify-center items-center mt-10'>
                                     <input type='submit'
                                            name='Submit'
