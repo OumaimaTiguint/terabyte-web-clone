@@ -9,6 +9,8 @@ import OfferExpCard from './OfferExpCard';
 import OfferExplanation from './OfferExplanation';
 import CardTalkWithUs from './CardTalkWithUs';
 import WhySection from './WhySection';
+import Testimonials from './Testimonials';
+import TestimonialCard from './TestimonialCard';
 
 export {
     Loader,
@@ -21,5 +23,7 @@ export {
     OfferExpCard,
     OfferExplanation,
     CardTalkWithUs,
-    WhySection
+    WhySection,
+    TestimonialCard,
+    Testimonials,
 }

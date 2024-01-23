@@ -12,3 +12,90 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.one-tes-card {
+  position: relative;
+  margin: 0px;
+  display: flex;
+  min-height: 500px;
+  height: auto;
+  width: 100vw;
+  max-width: 37.5rem;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  padding: 10px;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128);
+}
+
+.tes-controller-btn {
+  transition: opacity 0.3s;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255);
+}
+
+.tes-prev-btn {
+  left: 0px;
+}
+
+.tes_edge {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
+}
+
+.testimonial_slider {
+  position: relative;
+  margin-top: 1.25rem;
+  height: 100%;
+  width: 75rem;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.one-content-card-even {
+  display: inline-flex;
+  height: 100%;
+  width: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.625rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 18 66);
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.one-content-card-odd {
+  display: inline-flex;
+  height: 100%;
+  width: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.625rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 245);
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}

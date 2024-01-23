@@ -1,0 +1,90 @@
+import React, { useRef, useState} from 'react';
+import Slider from 'react-slick';
+import { testimonialsData } from '../data/testimonialsData';
+import TestimonialCard from './TestimonialCard';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const Testimonials = () => {
+    const sliderRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const CustomNextArrow = () => (
+        <div className={`next tes-prev-btn tes-controller-btn ${currentSlide === testimonialsData.length - 1 ? 'tes_edge' : ''}`}
+             onClick={() => sliderRef.current.slickNext()}>
+            <img className="rotate-180 w-6 active"
+                 src="https://terabyte-web.com/img/home/tes/arrow.svg"
+                 alt="arrow-img"
+                 width="16"
+                 height="16" />
+        </div>
+    );
+
+    const CustomPrevArrow = () => (
+        <div className={`prev tes-prev-btn tes-controller-btn ${currentSlide === 0 ? 'tes_edge' : ''}`}
+             onClick={() => sliderRef.current.slickPrev()}>
+            <img className="w-6 active"
+                 src="https://terabyte-web.com/img/home/tes/arrow.svg"
+                 alt="arrow-img"
+                 width="16"
+                 height="16" />
+        </div>
+    );
+
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToScroll: 1,
+        arrows: false, // Hide default arrows
+        nextArrow: <CustomNextArrow />,
+        prevArrow: <CustomPrevArrow />,
+        afterChange: (current) => setCurrentSlide(current),
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
+    return (
+        <div className='min-h-[90vh]'>
+            <div className='relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 px-4 gap-y-2'>
+                <h2 className='sm:text-4xl xs:text-2xl text-xl font-semibold text-white'>
+                    What Our Customers Say
+                </h2>
+                <h3 className="bg-none"></h3>
+                <div className='flex gap-2'>
+                    <CustomPrevArrow />
+                    <CustomNextArrow />
+                </div>
+            </div>
+            <Slider ref={sliderRef} {...settings} className='testimonial-slider'>
+                {testimonialsData.map((tes, index) => (
+                    <TestimonialCard key={index}
+                                     id={index}
+                                     name={tes.name}
+                                     role={tes.role}
+                                     company={tes.company}
+                                     picture={tes.picture}
+                                     message={tes.message}
+                                     rating={tes.rating} />
+                ))}
+            </Slider>
+        </div>
+    );
+};
+
+export default Testimonials;
+
+
