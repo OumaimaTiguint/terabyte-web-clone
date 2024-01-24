@@ -31,7 +31,7 @@ function BackToTop() {
         <div className={`fixed bottom-6 right-6 transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}>
             <button onClick={scrollToTop}
                     aria-label='Back to top'
-                    className='p-4 rounded-full focus:outline-none'>
+                    className='p-4 rounded-full focus:outline-none text-white'>
                 <IoIosArrowDropupCircle className='text-3xl' />
             </button>
         </div>
