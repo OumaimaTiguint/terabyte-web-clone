@@ -12,6 +12,7 @@ import WhySection from './WhySection';
 import Testimonials from './Testimonials';
 import TestimonialCard from './TestimonialCard';
 import ContactUs from './ContactUs';
+import Landing from './Landing';
 
 export {
     Loader,
@@ -27,5 +28,6 @@ export {
     WhySection,
     TestimonialCard,
     Testimonials,
-    ContactUs
+    ContactUs,
+    Landing
 }

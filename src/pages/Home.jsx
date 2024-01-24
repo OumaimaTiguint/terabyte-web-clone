@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { CardTalkWithUs, ClientsMarquee, ContactUs, ExploreOurServices, InternationalTeam, Loader, MyRecentWork, OfferExplanation, Testimonials, WhySection } from '../components';
+import { CardTalkWithUs, ClientsMarquee, ContactUs, ExploreOurServices, InternationalTeam, Landing, Loader, MyRecentWork, OfferExplanation, Testimonials, WhySection } from '../components';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
 
     return (
         <>
-            <ClientsMarquee />
+            <Landing />
             <InternationalTeam />
             <ExploreOurServices />
             <MyRecentWork />

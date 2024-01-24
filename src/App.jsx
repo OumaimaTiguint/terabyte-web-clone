@@ -25,11 +25,11 @@ function App() {
 
 	return (
 		<BrowserRouter>
-			<header className="w-full flex justify-between items-center sm:px-8 px-4 py-4 fixed top-0 left-0 h-16 md:h-32 animate-fade-in-down z-50">
+			<header className="fixed w-full flex items-center justify-between  bg-transparent min-[880px]:px-16 px-8 py-10 z-50 h-32 animate-fade-in-down fixed-top">
         		<Link to="/" className='shrink-0'>
           			<img src="https://terabyte-web.com/img/terabyte-web-logo.webp" 
                			 alt="logo" 
-               			 className="h-10 md:h-16 shrink-0" />
+               			 className="h-10 shrink-0" />
         		</Link>
         		<div className="md:hidden">
           			{isBurgerMenuOpen ? (
@@ -42,7 +42,7 @@ function App() {
           			{links.map(e => (
             			<Link to={e.path} 
                   			  key={e.id}
-                  			  className={`font-inter font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} text-white px-4 py-2 rounded-full mb-2`}>
+                  			  className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} text-white px-4 py-2 rounded-full mb-2`}>
               				{e.name}
             			</Link>
           			))}

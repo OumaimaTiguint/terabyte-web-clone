@@ -41,7 +41,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className='relative pb-28 flex flex-col justify-center items-center text-white'>
+        <div id='contact' className='relative pb-28 flex flex-col justify-center items-center text-white'>
             <div className='relative w-full max-w-screen-2xl'>
                 <img src="https://terabyte-web.com/img/home/contact/contact_us.svg" 
                      alt="contact_us"
