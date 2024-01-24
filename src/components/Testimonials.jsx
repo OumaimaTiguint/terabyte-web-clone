@@ -66,7 +66,7 @@ const Testimonials = () => {
     };
 
     return (
-        <div className='relative min-h-[100vh] mt-20 pb-28'>
+        <div className='relative min-h-[100vh] mt-20 pb-28 sm:px-16 px-4'>
             <div className='relative w-full max-w-screen-2xl'>
                 <img src="https://terabyte-web.com/img/home/tes/testimonials.svg" 
                      alt="testimonials" 

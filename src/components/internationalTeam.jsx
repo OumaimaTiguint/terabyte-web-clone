@@ -3,7 +3,7 @@ import { internationalTeamData } from '../data/internationalTeamData';
 
 function InternationalTeam() {
     return (
-        <div className='h-[70vh] sm:h-[90vh] items-center justify-center text-white'>
+        <div className='h-[70vh] sm:h-[90vh] items-center justify-center text-white sm:px-16 px-4'>
             <div className='flex flex-col md:flex-row items-center justify-center h-full'>
                 <div className='flex-2 h-1/2 md:h-full my-auto flex md:flex-col flex-row items-end justify-center'>
                     <div className='flex content-center justify-center items-center'>

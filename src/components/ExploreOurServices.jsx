@@ -2,7 +2,7 @@ import React from 'react';
 
 function ExploreOurServices() {
     return (
-        <div className='h-[90vh] flex flex-col justify-center items-center element-to-fade-to-top fade-in-top text-white'>
+        <div className='sm:px-16 px-4 h-[90vh] flex flex-col justify-center items-center element-to-fade-to-top fade-in-top text-white'>
             <h2 className="text-tera_lighter sm:text-2xl xs:text-xl text-lg text-center font-semibold leading-10 p-8 text-blue-400">
                 EXPLORE OUR SERVICES
             </h2>

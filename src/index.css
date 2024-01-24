@@ -103,6 +103,7 @@
 .testimonial-slider.slick-slider {
   overflow: hidden !important;
 }
+
 .slick-slide.single-slide {
   display: grid;
   place-items: center !important;

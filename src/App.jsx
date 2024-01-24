@@ -49,7 +49,7 @@ function App() {
         		</div>
       		</header>
 
-			<main className="sm:py-32 sm:px-16 px-4 py-16 w-full bg-blue-950 min-h-screen">
+			<main className="relative overflow-hidden sm:py-32 py-16 w-full bg-blue-950 min-h-screen">
 				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={ <Home />} />
@@ -58,7 +58,7 @@ function App() {
 				<BackToTop />
 			</main>
 
-			<footer className="w-fullrelative bg-blue-950 text-white">
+			<footer className="w-full relative bg-blue-950 text-white px-4">
     			<div className="container-xxl">
         			<div className="py-3">
             			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
