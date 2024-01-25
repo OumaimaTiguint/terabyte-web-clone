@@ -58,7 +58,7 @@ function App() {
 				<BackToTop />
 			</main>
 
-			<footer className="w-full relative bg-blue-950 px-4">
+			<footer className="w-full relative px-4">
     			<div className="container-xxl">
         			<div className="py-3">
             			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
