@@ -41,7 +41,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div id='contact' className='sm:px-16 px-4 relative pb-28 flex flex-col justify-center items-center text-white'>
+        <div id='contact' className='relative pb-28 flex flex-col justify-center items-center text-white'>
             <div className='relative w-full max-w-screen-2xl'>
                 <img src="https://terabyte-web.com/img/home/contact/contact_us.svg" 
                      alt="contact_us"
@@ -140,7 +140,7 @@ const ContactUs = () => {
                     </form>
                 </div>
             </div>
-            <div className='absolute bottom-0 right-0 z-[-1]'>
+            <div className='absolute bottom-0 right-0'>
                 <img src="https://terabyte-web.com/img/background_svg/gradient_2.svg" 
                      width="1366" 
                      height="1545" 
