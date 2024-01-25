@@ -2,6 +2,7 @@ import React from 'react';
 import OfferExpCard from './OfferExpCard';
 import { offerExplanationData } from '../data/offerExplanationData';
 import { countingLpcData } from '../data/countingLpcData';
+import CountUp from 'react-countup';
 
 function OfferExplanation() {
     return (
@@ -24,7 +25,15 @@ function OfferExplanation() {
                 <div className='relative max-w-[67.3rem] flex flex-wrap m-auto justify-center items-center gap-5 mt-20 mb-36 element-to-fade-to-top element-to-start-counting fade-in-top'>
                     {countingLpcData.map((e) => (
                         <div key={e.id} className='h-16 justify-center items-center gap-1 flex text-white'>
-                            <h3 className='text-right sm:text-[50px] xs:text-4xl text-3xl font-semibold'>{e.number}</h3>
+                            {e.id === 2 ? (
+                                <CountUp end={e.number} duration={2} separator="," delay={0.5}>
+                                    {({ countUpRef }) => (
+                                        <h3 ref={countUpRef} className='text-right sm:text-[50px] xs:text-4xl text-3xl font-semibold'></h3>
+                                    )}
+                                </CountUp>
+                            ) : (
+                                <h3 className='text-right sm:text-[50px] xs:text-4xl text-3xl font-semibold'>{e.number}</h3>
+                            )}
                             <div className='w-5 h-5 bg-blue-200'></div>
                             <p className='sm:text-xl xs:text-lg text-base font-normal'>{e.title}</p>
                         </div>
