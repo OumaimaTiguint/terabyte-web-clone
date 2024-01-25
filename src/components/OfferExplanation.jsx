@@ -11,13 +11,13 @@ function OfferExplanation() {
                     Let’s Create good products Together, From Day 1
                 </h4>
                 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                     {offerExplanationData.map((offer) => (
                         <OfferExpCard key={offer.id}
                                       id={offer.id}
                                       title={offer.title}
                                       logo={offer.logo}
-                                      description={offer.description}/>
+                                      description={offer.description} />
                     ))}
                 </div>
 
