@@ -14,7 +14,7 @@ const CardTalkWithUs = () => {
 
                     <div className="relative w-full flex justify-center mt-9 z-10">
                         <a href="#contact" 
-                           class="absolute py-3 px-10 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center  text-sm font-semibold shining-btn">
+                           className="absolute py-3 px-10 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center  text-sm font-semibold shining-btn">
                             Let's Talk
                         </a>
                     </div>

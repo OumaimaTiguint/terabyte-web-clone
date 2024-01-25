@@ -142,7 +142,12 @@
 }
 
 .one-div-one-head-anima {
-  //position: absolute;
+  position: absolute;
+  animation: circular-motion var(--speed, 12s) linear infinite;
+}
+
+.one-div-circle-anima {
+  position: absolute;
   animation: circular-motion var(--speed, 12s) linear infinite;
 }
 
