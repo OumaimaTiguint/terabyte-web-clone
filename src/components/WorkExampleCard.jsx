@@ -7,7 +7,7 @@ const WorkExampleCard = ({id, title, image}) => {
                 <img src={image} alt={title} className="object-contain rounded-t-lg" />
             </div>
             <div className='absolute h-16 w-full bottom-0 rounded-b-3xl bg-opacity-30 bg-black hover:bg-blue-800 hover:bg-opacity-40 flex justify-center items-center'>
-                <p className="text-white font-semibold text-lg">{title}</p>
+                <p className="font-semibold text-lg">{title}</p>
             </div>
         </div>
     );

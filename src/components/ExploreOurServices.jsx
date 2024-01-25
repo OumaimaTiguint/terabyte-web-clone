@@ -3,8 +3,8 @@ import MyRecentWork from './MyRecentWork';
 
 function ExploreOurServices() {
     return (
-        <div className='relative sm:pb-96 pb-40 overflow-x-hidden'>
-            <div className='relative h-[90vh] flex flex-col justify-center items-center element-to-fade-to-top fade-in-top text-white z-10'>
+        <div className='relative sm:pb-40 pb-20 overflow-x-hidden'>
+            <div className='relative h-[90vh] flex flex-col justify-center items-center element-to-fade-to-top fade-in-top z-10'>
                 <h2 className="sm:text-2xl xs:text-xl text-lg text-center font-semibold leading-10 p-8 text-blue-400">
                     EXPLORE OUR SERVICES
                 </h2>

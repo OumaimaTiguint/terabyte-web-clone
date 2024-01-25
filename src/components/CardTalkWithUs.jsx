@@ -3,7 +3,7 @@ import React from 'react';
 const CardTalkWithUs = () => {
     return (
         <div className='relative pt-8 flex flex-col items-center'>
-            <div className='w-full flex justify-center p-3 text-white'>
+            <div className='w-full flex justify-center p-3'>
                 <div className='max-w-screen-2xl w-full p-5 pt-20 pb-28 mt-48 bg-tera-container-to-tr rounded-3xl border border-white border-opacity-10 flex flex-col justify-center items-center element-to-fade-to-top fade-in-top z-1'>
                     <h2 className='text-center sm:text-[43px] xs:text-4xl text-3xl font-extrabold leading-[50px]'>
                         Talk with us Freely without obligation

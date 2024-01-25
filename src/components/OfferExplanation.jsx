@@ -5,9 +5,9 @@ import { countingLpcData } from '../data/countingLpcData';
 
 function OfferExplanation() {
     return (
-        <div className='mx-auto flex flex-col md:flex-row sm:px-16 px-4'>
+        <div className='relative pt-8 mx-auto flex flex-col md:flex-row sm:px-16 px-4'>
             <div className='w-full p-4 md:p-8'>
-                <h4 className='text-center sm:text-3xl xs:text-2xl text-xl font-medium leading-10 px-7 text-white mb-20'>
+                <h4 className='text-center sm:text-3xl xs:text-2xl text-xl font-medium leading-10 px-7 mb-20'>
                     Let’s Create good products Together, From Day 1
                 </h4>
                 

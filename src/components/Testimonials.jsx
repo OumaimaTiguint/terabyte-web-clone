@@ -75,7 +75,7 @@ const Testimonials = () => {
                 <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#172554] to-transparent"></div>
             </div>
             <div className='mt-20 relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 px-4 gap-y-2'>
-                <h2 className='sm:text-4xl xs:text-2xl text-xl font-semibold text-white'>
+                <h2 className='sm:text-4xl xs:text-2xl text-xl font-semibold'>
                     What Our Customers Say
                 </h2>
                 <h3 className="bg-none"></h3>
