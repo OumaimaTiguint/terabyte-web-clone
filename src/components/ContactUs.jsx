@@ -49,7 +49,7 @@ const ContactUs = () => {
                      height="100%" 
                      className="active" />
             </div>
-            <div className='w-full flex items-center justify-center px-5'>
+            <div className='w-full flex items-center justify-center px-5 z-10'>
                 <div className='max-w-[75.5rem] w-full h-full px-6 py-[6rem] bg-tera-container-to-tl border-[1px] rounded-[44px] border-white border-opacity-10 justify-start items-center flex mt-20 element-to-fade-to-top fade-in-top'>
                     <form className='w-full' onSubmit={handleContactForm}>
                         <div className='max-w-[75.5rem] w-full h-full flex-col sm:justify-start justify-center items-center inline-flex'>
