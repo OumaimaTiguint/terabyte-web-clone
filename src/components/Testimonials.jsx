@@ -10,14 +10,25 @@ const Testimonials = () => {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [totalSlides, setTotalSlides] = useState(testimonialsData.length);
+    const [visibleSlides, setVisibleSlides] = useState(1);
+
 
     const updateTotalSlides = (slideCount) => {
         setTotalSlides(slideCount);
     };
 
+    const updateVisibleSlides = () => {
+        if (sliderRef.current) {
+          setVisibleSlides(sliderRef.current.props.slickVisible);
+        }
+    };
+
     const CustomNextArrow = () => (
         <div className={`next tes-prev-btn tes-controller-btn ${currentSlide === totalSlides - 1 ? 'tes_edge' : ''}`}
-             onClick={() => sliderRef.current.slickNext()}>
+             onClick={() => {
+                sliderRef.current.slickNext();
+                updateVisibleSlides();
+              }}>
             <img className="rotate-180 w-6 active"
                  src="https://terabyte-web.com/img/home/tes/arrow.svg"
                  alt="arrow-img"
@@ -28,7 +39,10 @@ const Testimonials = () => {
 
     const CustomPrevArrow = () => (
         <div className={`prev tes-prev-btn tes-controller-btn ${currentSlide === 0 ? 'tes_edge' : ''}`}
-             onClick={() => sliderRef.current.slickPrev()}>
+             onClick={() => {
+                sliderRef.current.slickPrev();
+                updateVisibleSlides();
+              }}>
             <img className="w-6 active"
                  src="https://terabyte-web.com/img/home/tes/arrow.svg"
                  alt="arrow-img"
@@ -46,7 +60,10 @@ const Testimonials = () => {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
         afterChange: (current) => setCurrentSlide(current),
-        beforeChange: (_, next) => updateTotalSlides(next + 1),
+        beforeChange: (_, next) => {
+            updateTotalSlides(next + 1);
+            updateVisibleSlides();
+        },      
         responsive: [
             {
                 breakpoint: 9999,
@@ -66,15 +83,14 @@ const Testimonials = () => {
     };
 
     return (
-        <div className='relative min-h-[100vh] mt-20 pb-28 sm:px-16 px-4'>
+        <div className='relative min-h-[100vh] mt-20 pb-28'>
             <div className='relative w-full max-w-screen-2xl'>
-                <img src="https://terabyte-web.com/img/home/tes/testimonials.svg" 
+                <img src="/assets/testimonials.svg" 
                      alt="testimonials" 
                      width="100%" 
                      height="100%" />
-                <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#172554] to-transparent"></div>
             </div>
-            <div className='mt-20 relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 px-4 gap-y-2'>
+            <div className='sm:px-16 px-4 mt-32 relative w-full flex flex-col xs:flex-row xs:justify-between justify-center items-center mb-6 min-[600px]:px-0 gap-y-2'>
                 <h2 className='sm:text-4xl xs:text-2xl text-xl font-semibold'>
                     What Our Customers Say
                 </h2>
@@ -85,7 +101,7 @@ const Testimonials = () => {
                 </div>
             </div>
             <Slider ref={sliderRef} {...settings}
-                    className={`testimonial-slider ${totalSlides === 1 ? 'single-slide' : ''}`}>
+                    className={`sm:px-16 px-4 testimonial-slider ${totalSlides === 1 ? 'single-slide' : ''}`}>
                 {testimonialsData.map((tes, index) => (
                     <TestimonialCard key={index}
                                      id={index}
@@ -97,10 +113,20 @@ const Testimonials = () => {
                                      rating={tes.rating} />
                 ))}
             </Slider>
+
+            <div className='absolute w-full top-0 z-[-1]'>
+                <div className='absolute top-0 w-full flex justify-center'>
+                    <img src="https://terabyte-web.com/img/home/tes/teraweb-dark_0.webp" 
+                         className="blur-[4px]" 
+                         alt="teraweb-dark_0" 
+                         width="1366" 
+                         height="1528" />
+                    <div className='absolute -bottom-[10px] w-full h-[1048px] origin-top-left bg-gradient-to-t from-[#0B2359] to-transparent from-35%'></div>
+                </div>
+                <div className='absolute top-0 w-full h-[1048px] origin-top-left bg-gradient-to-b from-[#0B2359] to-transparent'></div>
+            </div>
         </div>
     );
 };
 
 export default Testimonials;
-
-
