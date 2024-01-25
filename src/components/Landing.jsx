@@ -21,7 +21,7 @@ function Landing() {
                 </div>
             </div>
             <div className='h-[16rem] bg-transparent'></div>
-            <div className='absolute left-0 bottom-0 w-full h-64 bg-gradient-to-b from-transparent to-[#213768]'></div>
+            <div className='absolute left-0 bottom-0 w-full h-64 bg-gradient-to-b from-transparent to-[#213768] z-10'></div>
             <ClientsMarquee />
 
             <div className='absolute left-0 top-0 w-full h-64 bg-gradient-to-b from-[#0B2359] to-transparent'></div>

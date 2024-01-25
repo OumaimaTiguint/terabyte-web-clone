@@ -4,7 +4,7 @@ import { clientsData } from '../data/clientsData';
 
 function ClientsMarquee() {
     return (
-        <div className='marquee-container flex flex-col items-center justify-center'>
+        <div className='marquee-container flex flex-col items-center justify-center py-5'>
             
             <div className='flex items-center justify-center w-full'>
                 <div className='w-full'>
