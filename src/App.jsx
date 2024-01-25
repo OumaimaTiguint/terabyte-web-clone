@@ -31,22 +31,36 @@ function App() {
                			 alt="logo" 
                			 className="h-10 shrink-0" />
         		</Link>
-        		<div className="md:hidden">
+        		<div className="md:hidden z-10">
           			{isBurgerMenuOpen ? (
             			<FaTimes onClick={toggleBurgerMenu} className="cursor-pointer" />
           			) : (
             			<FaBars onClick={toggleBurgerMenu} className="cursor-pointer" />
           			)}
         		</div>
-        		<div className={`md:flex ${isBurgerMenuOpen ? 'flex-col mt-4' : 'hidden'}`}>
-          			{links.map(e => (
-            			<Link to={e.path} 
-                  			  key={e.id}
-                  			  className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} text-white px-4 py-2 rounded-full mb-2`}>
-              				{e.name}
-            			</Link>
-          			))}
-        		</div>
+				{isBurgerMenuOpen ? (
+					<div className="absolute top-0 right-0 bottom-0 h-full sm:w-[50vw] w-[70vw] min-[880px]:hidden justify-end">
+						<div className="space-y-7 flex flex-col left-0 top-0 w-full h-screen p-7 pb-2 pt-28 items-end justify-start text-center text-base font-medium bg-gradient-to-l from-[#0B2359] from-10% to-transparent">
+							{links.map(e => (
+								<Link to={e.path} 
+									key={e.id}
+									className='flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2'>
+									{e.name}
+								</Link>
+							))}
+						</div>
+				  	</div>
+				): (
+					<div className={`md:flex ${isBurgerMenuOpen ? 'flex-col mt-4' : 'hidden'}`}>
+						{links.map(e => (
+							<Link to={e.path} 
+								key={e.id}
+								className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}>
+								{e.name}
+							</Link>
+						))}
+        			</div>
+				)}
       		</header>
 
 			<main className="relative overflow-hidden sm:py-32 py-16 w-full min-h-screen">
