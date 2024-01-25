@@ -27,7 +27,9 @@ const OfferExpCard = ({id, title, logo, description}) => {
 
     return (
         <ScrollTrigger onEnter={() => setIsVisible(true)} onExit={() => setIsVisible(false)}>
-            <div key={id} className={`px-5 h-full w-full pt-[4rem] pb-7 rounded-2xl shadow border-2 ${id % 2 === 0 ? 'border-blue-300' : 'border-white'} flex flex-col items-center ${isVisible ? 'fade-in-top element-to-fade-to-top' : ''}`}>
+            <div key={id} 
+                 className={`px-5 h-full w-full pt-[4rem] pb-7 rounded-2xl shadow border-2 ${id % 2 === 0 ? 'border-blue-300' : 'border-white'} flex flex-col items-center ${isVisible ? 'fade-in-top element-to-fade-to-top' : ''}`} 
+                 id="offerExplanation">
                 <div className='flex items-center justify-center'>
                     <img src={logo} alt={title} height="56" width="56" />
                 </div>

@@ -11,7 +11,7 @@ export const countingLpcData = [
     },
     {
         id: 2,
-        number: '+2500',
+        number: 2500,
         title: 'Delivered Days'
     }
 ];
