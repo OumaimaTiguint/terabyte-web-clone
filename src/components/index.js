@@ -16,6 +16,7 @@ import Landing from './Landing';
 import AboutLanding from './AboutLanding';
 import TeamCard from './TeamCard';
 import Team from './Team';
+import OurBrand from './OurBrand';
 
 export {
     Loader,
@@ -35,5 +36,6 @@ export {
     Landing,
     AboutLanding,
     TeamCard,
-    Team
+    Team,
+    OurBrand
 }
