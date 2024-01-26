@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { Home, AboutUs } from './pages';
+import { Home, AboutUs, Services } from './pages';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
@@ -68,6 +68,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={ <Home />} />
 					<Route path="/about-us" element={ <AboutUs />} />
+					<Route path="/services" element={ <Services />} />
 				</Routes>
 				<BackToTop />
 			</main>
