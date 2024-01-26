@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { CardTalkWithUs, ClientsMarquee, ContactUs, ExploreOurServices, InternationalTeam, Landing, Loader, MyRecentWork, OfferExplanation, Testimonials, WhySection } from '../components';
+import React, { useState } from 'react';
+import { CardTalkWithUs, ClientsMarquee, ContactUs, ExploreOurServices, InternationalTeam, Landing, OfferExplanation, Testimonials, WhySection } from '../components';
+import { homeTalkWithUsData } from '../data/homeTalkWithUsData';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ const Home = () => {
                 </h2>
             </div>
             <ClientsMarquee />
-            <CardTalkWithUs />
+            <CardTalkWithUs header={homeTalkWithUsData.header} body={homeTalkWithUsData.body}  />
             <WhySection />
             <Testimonials />
             <ContactUs />

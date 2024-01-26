@@ -20,6 +20,7 @@ import OurBrand from './OurBrand';
 import OurDevelopers from './OurDevelopers';
 import ServicesLanding from './ServicesLanding';
 import WhatWeOffer from './WhatWeOffer';
+import OurProcess from './OurProcess';
 
 export {
     Loader,
@@ -43,5 +44,6 @@ export {
     OurBrand,
     OurDevelopers,
     ServicesLanding,
-    WhatWeOffer
+    WhatWeOffer,
+    OurProcess
 }
