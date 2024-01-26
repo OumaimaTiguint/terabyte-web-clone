@@ -13,6 +13,9 @@ import Testimonials from './Testimonials';
 import TestimonialCard from './TestimonialCard';
 import ContactUs from './ContactUs';
 import Landing from './Landing';
+import AboutLanding from './AboutLanding';
+import TeamCard from './TeamCard';
+import Team from './Team';
 
 export {
     Loader,
@@ -29,5 +32,8 @@ export {
     TestimonialCard,
     Testimonials,
     ContactUs,
-    Landing
+    Landing,
+    AboutLanding,
+    TeamCard,
+    Team
 }

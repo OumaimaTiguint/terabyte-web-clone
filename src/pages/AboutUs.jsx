@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Loader } from '../components';
+import React, { useState } from 'react';
+import { AboutLanding, ContactUs, Team, Loader } from '../components';
 
 const AboutUs = () => {
     const [loading, setLoading] = useState(false);
 
     return (
-        <div>about</div>
+        <>
+            <AboutLanding />
+            <Team />
+            <ContactUs />
+        </>
     )
 }
 
