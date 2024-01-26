@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ContactUs, ServicesLanding } from '../components';
+import { ContactUs, ServicesLanding, WhatWeOffer } from '../components';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
@@ -7,6 +7,7 @@ const Home = () => {
     return (
         <>
             <ServicesLanding />
+            <WhatWeOffer />
             <ContactUs />
         </>
     )

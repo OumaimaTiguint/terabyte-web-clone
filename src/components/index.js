@@ -19,6 +19,7 @@ import Team from './Team';
 import OurBrand from './OurBrand';
 import OurDevelopers from './OurDevelopers';
 import ServicesLanding from './ServicesLanding';
+import WhatWeOffer from './WhatWeOffer';
 
 export {
     Loader,
@@ -41,5 +42,6 @@ export {
     Team,
     OurBrand,
     OurDevelopers,
-    ServicesLanding
+    ServicesLanding,
+    WhatWeOffer
 }
