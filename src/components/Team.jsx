@@ -35,6 +35,17 @@ function Team() {
                               role={p.role} />
                 ))}
             </div>
+            {/* Background */}
+            <div className='absolute lg:top-[-10%] right-0 z-[-1]'>
+                <img src="https://terabyte-web.com/img/background_svg/gradient_3.svg"
+                     width='1246'
+                     height='1636' />
+            </div>
+            <div className='absolute right-0 -bottom-1/3 z-[-1]'>
+                <img src="https://terabyte-web.com/img/background_svg/gradient_4.svg"
+                     width='1310'
+                     height='1687' />
+            </div>
         </div>
     )
 }
