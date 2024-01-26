@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ContactUs } from '../components';
+import { ContactUs, ServicesLanding } from '../components';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
 
     return (
         <>
+            <ServicesLanding />
             <ContactUs />
         </>
     )
