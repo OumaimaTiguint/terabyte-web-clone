@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AboutLanding, ContactUs, Team, Loader, OurBrand } from '../components';
+import { AboutLanding, ContactUs, Team, Loader, OurBrand, OurDevelopers } from '../components';
 
 const AboutUs = () => {
     const [loading, setLoading] = useState(false);
@@ -9,6 +9,7 @@ const AboutUs = () => {
             <AboutLanding />
             <Team />
             <OurBrand />
+            <OurDevelopers />
             <ContactUs />
         </>
     )
