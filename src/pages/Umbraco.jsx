@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ContactUs, Testimonials } from '../components';
+import { ContactUs, Testimonials, UmbracoLanding } from '../components';
 
 const Umbraco = () => {
     const [loading, setLoading] = useState(false);
 
     return (
         <>
+            <UmbracoLanding />
             <Testimonials />
             <ContactUs />
         </>
