@@ -3,7 +3,7 @@ import React from 'react';
 function UmbracoLanding() {
     return (
         <div className='hero relative bg-cover bg-center pb-[8vw]' 
-             style={{ backgroundImage: 'url(https://terabyte-web.com/img/about-img/main-about-img.webp)' }}>
+             style={{ backgroundImage: 'url(https://terabyte-web.com/img/our-work-bg.webp)' }}>
             <div>
                 <img src='assets/umbraco-img.svg' />
             </div>
@@ -37,9 +37,8 @@ function UmbracoLanding() {
                     </div>
                 </div>
             </div>
-            {/* TODO: fix background color */}
             {/* Background */}
-            <div className='w-full h-1/6 absolute bottom-0 left-0 bg-gradient-to-t from-[#0B2359] to-transparent'></div>
+            <div className='w-full h-1/6 absolute bottom-0 left-0 bg-gradient-to-t from-[#0B2359] to-transparent z-10'></div>
         </div>
     )
 }
