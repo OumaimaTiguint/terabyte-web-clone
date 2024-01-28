@@ -26,6 +26,7 @@ import UmbracoServiceCard from './UmbracoServiceCard';
 import UmbracoServices from './UmbracoServices';
 import ServiceDetailCard from './ServiceDetailCard';
 import UmbracoServiceDetails from './UmbracoServiceDetails';
+import OffersLanding from './OffersLanding';
 
 export {
     Loader,
@@ -55,5 +56,6 @@ export {
     UmbracoServiceCard,
     UmbracoServices,
     ServiceDetailCard,
-    UmbracoServiceDetails
+    UmbracoServiceDetails,
+    OffersLanding
 }

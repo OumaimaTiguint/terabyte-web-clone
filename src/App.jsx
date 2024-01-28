@@ -16,7 +16,7 @@ function App() {
 		{ id: 2, name: 'Services', path: '/services' },
 		{ id: 3, name: 'Umbraco', path: '/umbraco' },
 		{ id: 4, name: 'Offers', path: '/offers' },
-		{ id: 5, name: 'Contact' , path: '/contact' },
+		{ id: 5, name: 'Contact' , path: '#contact' },
 	];
 
   	const toggleBurgerMenu = () => {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ContactUs } from '../components';
+import { ContactUs, OffersLanding } from '../components';
 
 const Offers = () => {
     const [loading, setLoading] = useState(false);
 
     return (
         <>
-            
+            <OffersLanding />
             <ContactUs />
         </>
     )
