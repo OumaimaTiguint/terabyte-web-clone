@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ContactUs, Testimonials, UmbracoLanding } from '../components';
+import { ContactUs, Testimonials, UmbracoLanding, UmbracoServices } from '../components';
 
 const Umbraco = () => {
     const [loading, setLoading] = useState(false);
@@ -7,6 +7,7 @@ const Umbraco = () => {
     return (
         <>
             <UmbracoLanding />
+            <UmbracoServices />
             <Testimonials />
             <ContactUs />
         </>

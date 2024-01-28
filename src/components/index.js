@@ -22,6 +22,8 @@ import ServicesLanding from './ServicesLanding';
 import WhatWeOffer from './WhatWeOffer';
 import OurProcess from './OurProcess';
 import UmbracoLanding from './UmbracoLanding';
+import UmbracoServiceCard from './UmbracoServiceCard';
+import UmbracoServices from './UmbracoServices';
 
 export {
     Loader,
@@ -47,5 +49,7 @@ export {
     ServicesLanding,
     WhatWeOffer,
     OurProcess,
-    UmbracoLanding
+    UmbracoLanding,
+    UmbracoServiceCard,
+    UmbracoServices
 }
