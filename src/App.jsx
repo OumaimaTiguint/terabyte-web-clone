@@ -70,6 +70,7 @@ function App() {
 					<Route path="/about-us" element={ <AboutUs />} />
 					<Route path="/services" element={ <Services />} />
 					<Route path="/umbraco" element={ <Umbraco />} />
+					<Route path="/offers" element={ <Offers />} />
 				</Routes>
 				<BackToTop />
 			</main>
