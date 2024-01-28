@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { Home, AboutUs, Services, Umbraco } from './pages';
+import { Home, AboutUs, Services, Umbraco, Offers } from './pages';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
