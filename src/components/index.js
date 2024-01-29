@@ -28,6 +28,8 @@ import ServiceDetailCard from './ServiceDetailCard';
 import UmbracoServiceDetails from './UmbracoServiceDetails';
 import OffersLanding from './OffersLanding';
 import WhyUmbraco from './WhyUmbraco';
+import DiscoverOfferCard from './DiscoverOfferCard';
+import DiscoverOffers from './DiscoverOffers';
 
 export {
     Loader,
@@ -59,5 +61,7 @@ export {
     ServiceDetailCard,
     UmbracoServiceDetails,
     OffersLanding,
-    WhyUmbraco
+    WhyUmbraco,
+    DiscoverOfferCard,
+    DiscoverOffers
 }
