@@ -26,9 +26,10 @@ function InternationalTeam() {
                             {internationalTeamData.body}
                         </p>
                         <div className="mt-5 flex justify-center lg:justify-end">
-                            <button className='bg-[#325588] text-[#b3c0d3] rounded-full shadow-lg py-2 px-4 transition-transform transform hover:scale-105 hover:opacity-80 hover:border hover:border-white hover:text-white'>
+                            <a href="./about-us" 
+                               className="relative w-36 h-10 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center opacity-70  text-sm font-medium shining-btn">
                                 More about us
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
