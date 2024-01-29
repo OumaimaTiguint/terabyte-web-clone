@@ -382,10 +382,11 @@ body {
 }
 
 @keyframes circular-motion {
-  from {
-    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  0% {
+    transform: rotate(0deg) translate(20px) rotate(0deg);
   }
-  to {
-    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+
+  100% {
+    transform: rotate(360deg) translate(20px) rotate(-360deg);
   }
 }

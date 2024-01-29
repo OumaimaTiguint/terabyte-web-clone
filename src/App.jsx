@@ -61,6 +61,7 @@ function App() {
                                 {links.map((e) =>
                                     e.id === 5 ? (
                                         <ScrollLink
+											to="/#"
                                             key={e.id}
                                             onClick={e.onClick}
                                             className={`flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2`}>
@@ -84,7 +85,7 @@ function App() {
                             {links.map((e) => (
                                 e.id === 5 ? (
                                     <ScrollLink
-										to="#"
+										to="/#"
                                         key={e.id}
                                         onClick={e.onClick}
                                         className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}
