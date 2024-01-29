@@ -3,7 +3,7 @@ import React from 'react';
 function OffersLanding() {
     return (
         <div className='relative bg-cover pb-16 pt-32'
-             style={{ backgroundImage: 'url(https://terabyte-web.com/img/Offers/close-up-people-s-hands-working-computers%201%20(1).png)' }}>
+             style={{ backgroundImage: 'url(assets/offers-landing.png)' }}>
             <div className='sm:w-[80%] max-w-[1440px] mt-16 mx-3 pt-16 sm:mx-auto relative element-to-fade-to-top fade-in-top'>
                 <div className='sm:mx-auto max-w-[1440px] w-full mb-32 space-y-12'>
                     <h1 className="max-w-[1021px]  text-white text-[39px] font-extrabold font-['inter'] leading-[50px]">
