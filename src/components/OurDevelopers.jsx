@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function OurDevelopers() {
+    const videoRef = useRef(null);
     const [isVideoVisible, setVideoVisible] = useState(false);
 
     const handleTriangleClick = () => {
-        console.log('here')
-        setVideoVisible(!isVideoVisible);
+        const video = videoRef.current;
+
+        if (video) {
+            setVideoVisible(!isVideoVisible);
+            video.play();
+        }
     };
 
     return (
@@ -46,7 +51,7 @@ function OurDevelopers() {
                     </p>
                 </div>
                 {/* Video */}
-                <div className='flex items-end absolute bottom-4 element-to-fade-to-top fade-in-top'>
+                <div className='flex items-end absolute bottom-4 element-to-fade-to-top fade-in-top z-90'>
                     <div className='cursor-pointer relative w-24 h-24 bg-white bg-opacity-30 border-[1px] border-white border-opacity-30 rounded-full flex items-center justify-center shining-btn'
                          id='video-core-start'
                          onClick={handleTriangleClick}>
@@ -69,7 +74,8 @@ function OurDevelopers() {
                              src="https://terabyte-web.com/img/home/close_X.svg" 
                              className="active" />
                     </div>
-                    <video className='w-full h-full'
+                    <video ref={videoRef}
+                           className='w-full h-full'
                            id='tera-video'
                            loop
                            playsInline
