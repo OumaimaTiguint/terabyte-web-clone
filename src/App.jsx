@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { Home, AboutUs, Services, Umbraco, Offers } from './pages';
+import { Home, AboutUs, Services, Umbraco, Offers, Offer1 } from './pages';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
@@ -71,6 +71,7 @@ function App() {
 					<Route path="/services" element={ <Services />} />
 					<Route path="/umbraco" element={ <Umbraco />} />
 					<Route path="/offers" element={ <Offers />} />
+					<Route path="/offers/offer-1" element={ <Offer1 />} />
 				</Routes>
 				<BackToTop />
 			</main>
