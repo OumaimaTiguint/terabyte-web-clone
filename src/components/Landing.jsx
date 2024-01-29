@@ -3,7 +3,7 @@ import ClientsMarquee from './ClientsMarquee';
 
 function Landing() {
     return (
-        <div className='relative flex flex-col justify-center items-center overflow-hidden'>
+        <div className='pt-32 relative flex flex-col justify-center items-center overflow-hidden'>
             <div className='max-w-screen-2xl w-full mt-8'>
                 <div className='mx-7 sm:mx-16 mr-7 mt-20 relative max-w-xl z-[1] flex flex-col items-center sm:items-start element-to-fade-to-right fade-in-right'>
                     <div className='absolute w-[150%] h-[200%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0B2359] rounded-full blur-[4rem] z-[-1]'></div>
