@@ -11,6 +11,21 @@ body {
   color: #FFF;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E73BE;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
 .why-gradient-full-card {
   transition: scale 0.5s;
   position: relative;
