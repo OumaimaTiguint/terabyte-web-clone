@@ -255,6 +255,29 @@ body {
   transition: color 0.3s, transform 0.3s;
 }
 
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  border-radius: 100px;
+  transform: translateX(-100%);
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.3s;
+}
+
+.nav-btn:hover::after {
+  transition: transform 0.3s;
+  transform: translateX(0%);
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+  color: #1E73BE;
+}
+
+
 .btn-tera-video {
   transition: opacity 0.3s;
   position: absolute;
@@ -380,6 +403,28 @@ body {
   animation-duration: 1.7s;
   animation-fill-mode: both;
 }
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  transition: width 0.2s;
+  bottom: -5px;
+  left: 0px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 
 @keyframes circular-motion {
   0% {

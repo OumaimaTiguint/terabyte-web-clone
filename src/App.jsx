@@ -71,7 +71,7 @@ function App() {
                                         <RouterLink
                                             key={e.id}
                                             to={e.path}
-                                            className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}
+                                            className={`flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2`}
                                         >
                                             {e.name}
                                         </RouterLink>
@@ -88,15 +88,17 @@ function App() {
 										to="/#"
                                         key={e.id}
                                         onClick={e.onClick}
-                                        className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}
+                                        className={`cursor-pointer nav-btn`}
                                     >
-                                        {e.name}
+                                        <span className='m-auto'>
+                                            {e.name}
+                                        </span>
                                     </ScrollLink>
                                 ) : (
                                     <RouterLink
                                         key={e.id}
                                         to={e.path}
-                                        className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}
+                                        className={`nav-link flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2`}
                                     >
                                         {e.name}
                                     </RouterLink>
