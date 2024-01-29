@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Home, AboutUs, Services, Umbraco, Offers, Offer1, Offer2 } from './pages';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { socialsData } from './data/socialsData';
 import { BackToTop } from './components';
@@ -10,6 +10,8 @@ import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
 	const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
+	const [isScrolled, setScrolled] = useState(false);
+
 	const links = [
 		{ id: 0, name: 'Home', path: '/' },
 		{ id: 1, name: 'About us', path: '/about-us' },
@@ -23,47 +25,62 @@ function App() {
     	setBurgerMenuOpen(!isBurgerMenuOpen);
   	};
 
+	const handleScroll = () => {
+		const scrollTop = window.scrollY;
+		const isTop = scrollTop < 10;
+		setScrolled(!isTop);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<BrowserRouter>
-			<header className="fixed w-full flex items-center justify-between  bg-transparent min-[880px]:px-16 px-8 py-10 z-50 h-32 animate-fade-in-down fixed-top">
-        		<Link to="/" className='shrink-0'>
-          			<img src="https://terabyte-web.com/img/terabyte-web-logo.webp" 
-               			 alt="logo" 
-               			 className="h-10 shrink-0" />
-        		</Link>
-        		<div className="md:hidden z-10">
-          			{isBurgerMenuOpen ? (
-            			<FaTimes onClick={toggleBurgerMenu} className="cursor-pointer" />
-          			) : (
-            			<FaBars onClick={toggleBurgerMenu} className="cursor-pointer" />
-          			)}
-        		</div>
-				{isBurgerMenuOpen ? (
-					<div className="absolute top-0 right-0 bottom-0 h-full sm:w-[50vw] w-[70vw] min-[880px]:hidden justify-end">
-						<div className="space-y-7 flex flex-col left-0 top-0 w-full h-screen p-7 pb-2 pt-28 items-end justify-start text-center text-base font-medium bg-gradient-to-l from-[#0B2359] from-10% to-transparent">
+			<header>
+        		<nav className={`fixed w-full flex items-center justify-between min-[880px]:px-16 px-8 py-10 z-50 h-32 bg-transparent ${isScrolled ? 'fixed-top ' : ''} animate-fade-in-down`}>
+					<Link to="/" className='shrink-0'>
+						<img src="https://terabyte-web.com/img/terabyte-web-logo.webp" 
+							alt="logo" 
+							className="h-10 shrink-0" />
+					</Link>
+					<div className="md:hidden z-10">
+						{isBurgerMenuOpen ? (
+							<FaTimes onClick={toggleBurgerMenu} className="cursor-pointer" />
+						) : (
+							<FaBars onClick={toggleBurgerMenu} className="cursor-pointer" />
+						)}
+					</div>
+					{isBurgerMenuOpen ? (
+						<div className="absolute top-0 right-0 bottom-0 h-full sm:w-[50vw] w-[70vw] min-[880px]:hidden justify-end">
+							<div className="space-y-7 flex flex-col left-0 top-0 w-full h-screen p-7 pb-2 pt-28 items-end justify-start text-center text-base font-medium bg-gradient-to-l from-[#0B2359] from-10% to-transparent">
+								{links.map(e => (
+									<Link to={e.path} 
+										  key={e.id}
+										  className='flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2'>
+										{e.name}
+									</Link>
+								))}
+							</div>
+						</div>
+					) : (
+						<div className={`md:flex ${isBurgerMenuOpen ? 'flex-col mt-4' : 'hidden'}`}>
 							{links.map(e => (
 								<Link to={e.path} 
-									key={e.id}
-									className='flex items-center text-sm font-medium px-4 py-2 rounded-full mb-2'>
+									  key={e.id}
+									  className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}>
 									{e.name}
 								</Link>
 							))}
 						</div>
-				  	</div>
-				): (
-					<div className={`md:flex ${isBurgerMenuOpen ? 'flex-col mt-4' : 'hidden'}`}>
-						{links.map(e => (
-							<Link to={e.path} 
-								key={e.id}
-								className={`flex items-center text-sm font-medium ${e.id === 5 ? 'bg-[#0284c7]' : ''} px-4 py-2 rounded-full mb-2`}>
-								{e.name}
-							</Link>
-						))}
-        			</div>
-				)}
+					)}
+				</nav>
       		</header>
 
-			<main className="relative overflow-hidden sm:py-32 py-16 w-full min-h-screen">
+			<main className="relative overflow-hidden w-full min-h-screen">
 				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={ <Home />} />
