@@ -51,7 +51,7 @@ function OurDevelopers() {
                     </p>
                 </div>
                 {/* Video */}
-                <div className='flex items-end absolute bottom-4 element-to-fade-to-top fade-in-top z-90'>
+                <div className='flex items-end absolute bottom-4 element-to-fade-to-top fade-in-top z-10'>
                     <div className='cursor-pointer relative w-24 h-24 bg-white bg-opacity-30 border-[1px] border-white border-opacity-30 rounded-full flex items-center justify-center shining-btn'
                          id='video-core-start'
                          onClick={handleTriangleClick}>
@@ -63,7 +63,7 @@ function OurDevelopers() {
                     </div>
                 </div>
                 <div id='video-core-value' 
-                     className={`w-screen h-screen left-0 top-0 fixed bg-[#0B2359] bg-opacity-90 z-10 transition-all`}
+                     className={`w-screen h-screen left-0 top-0 fixed bg-[#0B2359] bg-opacity-90 z-50 transition-all`}
                      style={{ opacity: isVideoVisible ? 1 : 0, visibility: isVideoVisible ? 'visible' : 'hidden' }}>
                     <div id='video-core-close' 
                          onClick={handleTriangleClick}
